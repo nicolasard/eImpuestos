@@ -12,6 +12,10 @@ import java.util.HashMap;
 
 @Controller
 public class EmpresaPageController {
+    @RequestMapping("/")
+    public String inicio(){ 
+    	return "inicio";
+    }
     
     @RequestMapping("/seleccioneEmpresa")
     public String home(){ 

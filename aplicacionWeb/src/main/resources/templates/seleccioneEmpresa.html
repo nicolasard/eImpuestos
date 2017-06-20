@@ -1,13 +1,42 @@
 <!DOCTYPE html>
 <html layout:decorator="layout">
-<head></head>
-<body>
-<div class="container" layout:fragment="content">
+<head>
+
+<script>
+var App = angular.module('App', []);
+
+App.controller('EmpresasCtrl', function($scope, $http) {
+    
+$http.get('http://127.0.0.1:8080/empresas')
+   .then(function(res){
+      $scope.empresas = res.data;    
+      console.log($scope.empresas);
+    });
+
+$scope.seleccionarEmpresa = function($empresaId) {
+    console.log("Seleccionando empresa...");
+    $http.get('http://127.0.0.1:8080/seleccionarEmpresa/'+$empresaId)
+       .then(function(res){
+      //$scope.empresas = res.data;    
+      console.log(res.data);  
+      window.location.href = "./";
+    });
+}
+});
+</script>
+    
+</head>
+<body>    
+<div class="container" layout:fragment="content" ng-app="App" ng-controller="EmpresasCtrl">
 
   <div class="starter-template">
     <h1>Seleccione una empresa para trabajar:</h1>
+    <div style="margin: auto;width: 700px; height: 400px; overflow-y: scroll;">
+        <div class="list-group">
+          <a ng-click="seleccionarEmpresa(empresa.id)" ng-repeat="empresa in empresas" href="#" class="list-group-item">{{empresa.nombre}}</a>
+        </div>
+    </div>
   </div>
-
 </div>
 </body>
 </html>
