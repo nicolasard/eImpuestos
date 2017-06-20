@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html layout:decorator="layout">
+<head></head>
+    <body>
+        <div class="container" layout:fragment="content">
+            <h3>Bienvenido!</h3>
+            <h4>Usted esta administrando la empresa <b><span th:text="${session.empresaSeleccionada.Nombre}"></span></b></h4>
+            Ramo:______________
+            CUIT: <span th:text="${session.empresaSeleccionada.cuit}"></span>
+            Direccion:____________-
+            Telefono:___________
+            
+        <div>
+            <h4>Ultimos año fiscal cargado:</h4>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Periodo</th>
+                        <th>Total Compras</th>
+                        <th>Total Ventas</th>
+                        <th>Resultado</th>
+                    </tr> 
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>100</td>
+                        <td>230</td>
+                        <td>130</td> 
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        </div>
+    </body>
+</html>
