@@ -3,12 +3,16 @@
 ---------------------------------------------------
 
 CREATE TABLE empresa(
-    nombre 
+    empresaID INT,
+    nombre CHAR(30),
+    cuit CHAR(30)
 )
- --  PreparedStatement consulta = conex.getConnection().prepareStatement("SELECT * FROM empresa");
- -- ResultSet res = consulta.executeQuery();
- --  while(res.next()){
- --   Empresa persona= new Empresa();
- --   persona.setNombre(res.getString("nombre"));
- --   persona.setCuit(res.getString("cuit"));
- --    persona.setId(res.getInt("empresaID"));
+
+CREATE TABLE perfilUsuario(
+    perfilUsuarioID INT,
+    nombreCompleto CHAR(40),
+    email CHAR(100),
+    telefono CHAR(50)
+)
+
+--DATOS PARA PRUEBAS INICIALES
