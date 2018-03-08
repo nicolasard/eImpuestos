@@ -3,7 +3,11 @@
 The idea of this application is to learn how to use swagger and the H2 database by creating an application.
 
 ### Running the application
-TODO
+
+```
+mvn install
+mvn spring-boot:run
+```
 
 ### What's H2
 As the web page said, its (http://www.h2database.com)
