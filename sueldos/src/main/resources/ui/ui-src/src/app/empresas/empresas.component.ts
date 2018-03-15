@@ -7,20 +7,22 @@ import { EmpresasService } from '../empresas.service';
   templateUrl: './empresas.component.html',
   styleUrls: ['./empresas.component.css']
 })
+
 export class EmpresasComponent implements OnInit {
 
   empresas: Empresa[];
+  
 
   constructor(private empresaService: EmpresasService) { }
 
   ngOnInit() {
-    this.getEmpresas;
+    this.getEmpresas();
   }
 
 
   getEmpresas(): void {
-    this.empresaService.getHeroes()
+    this.empresaService.getEmpresas()
     .subscribe(heroes => this.empresas = heroes);
   }
-  
+
 }

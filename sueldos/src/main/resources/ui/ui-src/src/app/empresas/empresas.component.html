@@ -1,3 +1,22 @@
-<p>
-  empresas works!
-</p>
+<h4>  Listados de empresas </h4>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Razon Social</th>
+      <th scope="col">CUIT</th>
+      <th scope="col">Telefono</th>
+      <th scope="col">Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let empresa of empresas">
+      <th scope="row">{{empresa.empresaId}}</th>
+      <td>{{empresa.razonSocial}}</td>
+      <td>XX-XXXXXXXX-X</td>
+      <td>XXXXX-XXXXX</td>
+      <td>Eliminar - Editar </td>
+    </tr>
+  </tbody>
+</table>
