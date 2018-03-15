@@ -1,5 +1,5 @@
 <h4>  Listados de empresas </h4>
-
+Agregar Empresa
 <table class="table">
   <thead class="thead-dark">
     <tr>
@@ -12,10 +12,10 @@
   </thead>
   <tbody>
     <tr *ngFor="let empresa of empresas">
-      <th scope="row">{{empresa.empresaId}}</th>
+      <th scope="row">{{empresa.empresaID}}</th>
       <td>{{empresa.razonSocial}}</td>
-      <td>XX-XXXXXXXX-X</td>
-      <td>XXXXX-XXXXX</td>
+      <td>{{empresa.cuit}}</td>
+      <td>{{empresa.telefono}}</td>
       <td>Eliminar - Editar </td>
     </tr>
   </tbody>

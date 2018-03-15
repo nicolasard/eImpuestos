@@ -1,6 +1,6 @@
 export class Empresa {
-  empresaID: number;
+  empresaID: string;
   razonSocial: string;
-  cuit: number;
+  cuit: string;
   telefono: string;
 }
