@@ -1,6 +1,20 @@
 <h4>  Alta de una nueva empresa </h4>
 <div>
-
-
-<button type="button" class="btn btn-secondary">Agregar</button>
+    <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Razon Social</label>
+          <input type="text" [(ngModel)]="empre.razonSocial" name="razonSocial" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Razon Social">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Cuit</label>
+          <input type="text" [(ngModel)]="empre.cuit" name="cuit"  class="form-control" id="exampleInputPassword1" placeholder="CUIT">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Telefono</label>
+            <input type="text" [(ngModel)]="empre.telefono" name="telefono"  class="form-control" id="exampleInputPassword1" placeholder="Telefono">
+          </div>
+        <button type="button" class="btn btn-secondary">Agregar</button>
+      </form>
 </div>
+
+{{diagnostic}}
