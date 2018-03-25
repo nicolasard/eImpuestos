@@ -18,7 +18,7 @@
     <tr *ngFor="let empresa of empresas">
       <th scope="row">{{empresa.empresaID}}</th>
       <td>{{empresa.razonSocial}}</td>
-      <td>{{empresa.cuit}}</td>
+      <td>{{empresa.cuit}} - {{empresa.tipoResponsable?.descripcion}}</td>
       <td>{{empresa.telefono}}</td>
       <td>Eliminar - Editar </td>
     </tr>

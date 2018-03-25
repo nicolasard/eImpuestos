@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.hibernate.Session;
 
 import java.util.ArrayList;
@@ -36,7 +37,7 @@ public class EmpresaController {
 
     @RequestMapping(method=RequestMethod.POST)
     public @ResponseBody
-    Empresa putEmpresas(Empresa empresa) {
+    Empresa putEmpresas(@RequestBody Empresa empresa) { //Use RequestBody to know that is not a get variable
         Session session = HibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
 

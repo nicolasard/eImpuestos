@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Empresa } from '../empresa';
+import { EmpresasService } from '../empresas.service';
 
 @Component({
   selector: 'app-empresas-abm',
@@ -10,14 +11,15 @@ export class EmpresasAbmComponent implements OnInit {
 
   empre = new Empresa();
 
-  constructor() { }
+  constructor(private empresaService: EmpresasService) { }
 
   ngOnInit() {
   }
 
-  submitted = false;
-
-  onSubmit() { this.submitted = true; }  
+  save(): void {
+    console.log("saving...");
+    this.empresaService.addEmpresa(this.empre).subscribe(data => this.empre = data);
+  }
 
   get diagnostic() { return JSON.stringify(this.empre); }
 
