@@ -67,7 +67,6 @@ public class Empresa implements Serializable {
         this.telefono = telefono;
     }
 
-
     public TipoResponsable getTipoResponsable() {
         return tipoResponsable;
     }
